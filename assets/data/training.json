@@ -1,0 +1,1941 @@
+{
+  "version": 1,
+  "trainingPeriod": {
+    "start": "2026-02-01",
+    "end": "2026-08-31"
+  },
+  "days": [
+    {
+      "date": "2026-02-02",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2027 HU S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2027 HU S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-03",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 TRAINING HU S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 TRAINING HU S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-04",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2021 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2021 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-05",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2019 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2019 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-06",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2022 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2022 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-09",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2019 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2019 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-10",
+      "events": [
+        {
+          "type": "other",
+          "name": "WorldSkills Korea Mental Training",
+          "description": "Mental preparation and competition mindset session for WorldSkills Korea.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-02-11",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-13",
+      "events": [
+        {
+          "type": "other",
+          "name": "WorldSkills Korea Mental Training",
+          "description": "Mental preparation and competition mindset session for WorldSkills Korea.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-02-16",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 S17 - Module E",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 S17 - Module E",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-17",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-18",
+      "events": [
+        {
+          "type": "task",
+          "name": "EuroSkills 2023 Training HU - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "EuroSkills 2023 Training HU - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-19",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module F",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module F",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-20",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2023 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2023 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-23",
+      "events": [
+        {
+          "type": "other",
+          "name": "Self-directed learning",
+          "description": "Independent study and practice outside scheduled MITS modules.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-02-25",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2022 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2022 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-26",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2021 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2021 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-02-27",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-02",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-03",
+      "events": [
+        {
+          "type": "task",
+          "name": "Taitaja 2025 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "Taitaja 2025 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-04",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2021 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2021 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-05",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2023 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2023 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-09",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2023 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2023 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-10",
+      "events": [
+        {
+          "type": "task",
+          "name": "Taitaja 2025 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "Taitaja 2025 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-12",
+      "events": [
+        {
+          "type": "task",
+          "name": "EuroSkills 2023 Training HU - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "EuroSkills 2023 Training HU - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-13",
+      "events": [
+        {
+          "type": "task",
+          "name": "TS2025 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "TS2025 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-16",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2023 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2023 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-17",
+      "events": [
+        {
+          "type": "task",
+          "name": "TS2025 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "TS2025 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-18",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2019 S17 - Module F",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2019 S17 - Module F",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-19",
+      "events": [
+        {
+          "type": "task",
+          "name": "Taitaja 2024 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "Taitaja 2024 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-20",
+      "events": [
+        {
+          "type": "other",
+          "name": "Self-directed learning",
+          "description": "Independent study and practice outside scheduled MITS modules.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-03-23",
+      "events": [
+        {
+          "type": "task",
+          "name": "TS2025 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "TS2025 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-24",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-25",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2021 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2021 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-26",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 TRAINING HU S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 TRAINING HU S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-27",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2019 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2019 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-03-30",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2022 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2022 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-01",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module F",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module F",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-06",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 TRAINING HU S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 TRAINING HU S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-07",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2022 S17 - Module E",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2022 S17 - Module E",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-08",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2017 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2017 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-09",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2027 HU S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2027 HU S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-13",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2017 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2017 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-14",
+      "events": [
+        {
+          "type": "task",
+          "name": "TS2025 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "TS2025 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-17",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 TRAINING HU S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 TRAINING HU S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-20",
+      "events": [
+        {
+          "type": "task",
+          "name": "TS2025 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "TS2025 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-21",
+      "events": [
+        {
+          "type": "other",
+          "name": "WorldSkills Korea Mental Training",
+          "description": "Mental preparation and competition mindset session for WorldSkills Korea.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-04-22",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2019 S17 - Module E",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2019 S17 - Module E",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2018 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2018 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-24",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2023 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2023 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-27",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-28",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-04-30",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2019 S17 - Module F",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2019 S17 - Module F",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-01",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2023 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2023 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-04",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-06",
+      "events": [
+        {
+          "type": "task",
+          "name": "TS2025 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "TS2025 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-07",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 TRAINING HU S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 TRAINING HU S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-08",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2022 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2022 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2021 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2021 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "events": [
+        {
+          "type": "task",
+          "name": "EuroSkills 2023 Training HU - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "EuroSkills 2023 Training HU - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2018 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2018 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2017 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2017 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "events": [
+        {
+          "type": "other",
+          "name": "Self-directed learning",
+          "description": "Independent study and practice outside scheduled MITS modules.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-05-18",
+      "events": [
+        {
+          "type": "task",
+          "name": "EuroSkills 2023 Training HU - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "EuroSkills 2023 Training HU - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2021 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2021 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-21",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "events": [
+        {
+          "type": "other",
+          "name": "Self-directed learning",
+          "description": "Independent study and practice outside scheduled MITS modules.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "events": [
+        {
+          "type": "other",
+          "name": "Self-directed learning",
+          "description": "Independent study and practice outside scheduled MITS modules.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-05-27",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module E",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module E",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2023 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2023 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 S17 - Module E",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 S17 - Module E",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "events": [
+        {
+          "type": "task",
+          "name": "EuroSkills 2023 Training HU - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "EuroSkills 2023 Training HU - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 TRAINING HU S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 TRAINING HU S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-08",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2022 S17 - Module E",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2022 S17 - Module E",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-09",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2017 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2017 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-10",
+      "events": [
+        {
+          "type": "other",
+          "name": "WorldSkills Korea Mental Training",
+          "description": "Mental preparation and competition mindset session for WorldSkills Korea.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-06-15",
+      "events": [
+        {
+          "type": "other",
+          "name": "WorldSkills Korea Mental Training",
+          "description": "Mental preparation and competition mindset session for WorldSkills Korea.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2022 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2022 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-19",
+      "events": [
+        {
+          "type": "other",
+          "name": "WorldSkills Korea Mental Training",
+          "description": "Mental preparation and competition mindset session for WorldSkills Korea.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-06-23",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2017 S17 - Module EF",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2017 S17 - Module EF",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "events": [
+        {
+          "type": "task",
+          "name": "Taitaja 2024 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "Taitaja 2024 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "events": [
+        {
+          "type": "other",
+          "name": "Self-directed learning",
+          "description": "Independent study and practice outside scheduled MITS modules.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-06-29",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2021 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2021 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "events": [
+        {
+          "type": "task",
+          "name": "EuroSkills 2023 Training HU - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "EuroSkills 2023 Training HU - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2027 HU S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2027 HU S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2023 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2023 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-03",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2022 S17 - Module F",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2022 S17 - Module F",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2018 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2018 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "events": [
+        {
+          "type": "task",
+          "name": "TS2025 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "TS2025 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2022 S17 - Module F",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2022 S17 - Module F",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2019 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2019 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2022 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2022 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2023 S17 - Module E",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2023 S17 - Module E",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2018 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2018 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "events": [
+        {
+          "type": "other",
+          "name": "Self-directed learning",
+          "description": "Independent study and practice outside scheduled MITS modules.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-27",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 TRAINING HU S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 TRAINING HU S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "events": [
+        {
+          "type": "other",
+          "name": "Self-directed learning",
+          "description": "Independent study and practice outside scheduled MITS modules.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 TRAINING HU S17 - Module C",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 TRAINING HU S17 - Module C",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "events": [
+        {
+          "type": "task",
+          "name": "EuroSkills 2023 Training HU - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "EuroSkills 2023 Training HU - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "events": [
+        {
+          "type": "task",
+          "name": "TS2025 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "TS2025 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "events": [
+        {
+          "type": "other",
+          "name": "WorldSkills Korea Mental Training",
+          "description": "Mental preparation and competition mindset session for WorldSkills Korea.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-08-10",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2025 S17 - Module B",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2025 S17 - Module B",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2027 HU S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2027 HU S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "events": [
+        {
+          "type": "task",
+          "name": "EuroSkills 2023 Training HU - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "EuroSkills 2023 Training HU - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "events": [
+        {
+          "type": "other",
+          "name": "WorldSkills Korea Mental Training",
+          "description": "Mental preparation and competition mindset session for WorldSkills Korea.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2019 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2019 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2021 S17 - Module D",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2021 S17 - Module D",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "events": [
+        {
+          "type": "task",
+          "name": "ES2023 S17 - Module E",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "ES2023 S17 - Module E",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-24",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2019 S17 - Module A",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2019 S17 - Module A",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2024 S17 - Module E",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2024 S17 - Module E",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "events": [
+        {
+          "type": "other",
+          "name": "Self-directed learning",
+          "description": "Independent study and practice outside scheduled MITS modules.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "events": [
+        {
+          "type": "other",
+          "name": "Self-directed learning",
+          "description": "Independent study and practice outside scheduled MITS modules.",
+          "durationHours": 8
+        }
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2019 S17 - Module E",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2019 S17 - Module E",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "events": [
+        {
+          "type": "task",
+          "name": "WS2017 S17 - Module EF",
+          "durationHours": 4,
+          "kanbanStatus": "todo"
+        },
+        {
+          "type": "evaluation",
+          "name": "WS2017 S17 - Module EF",
+          "durationHours": 2,
+          "kanbanStatus": "todo"
+        }
+      ]
+    }
+  ]
+}

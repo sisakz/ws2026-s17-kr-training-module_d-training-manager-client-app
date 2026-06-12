@@ -1,6 +1,6 @@
-# Title of the Project
+# WorldSkills Korea Training Manager
 
-descriptive-title-of-the-project
+A client-side prototype for managing WorldSkills Korea web developer training schedules, events, and progress over a 120-day preparation period.
 
 ## Skill domain(s)
 
@@ -8,12 +8,13 @@ descriptive-title-of-the-project
 
 ## Task Origin
 
-This project task is based on test projects based on the **competition-name** competition **module-name test project** submitted by **name-of-the-test-project-writer(s)**. The original task was updated, modularized, and standardized to form the basis of the project task repository within the Erasmus+ **"Marketable IT Skills: Integrating Real-World Challenges into Vocational Education"** project.
+This project task is based on the **SamsungSkills Invitational Friendly Challenge 2026** (SSIF2026) **Module D — Client App** test project submitted by **Zoltan Sisak**. The original task was updated, modularized, and standardized to form the basis of the project task repository within the Erasmus+ **"Marketable IT Skills: Integrating Real-World Challenges into Vocational Education"** project.
 
 ## Content
 
 - [Project Description](project-description.md)
-- [Media Files](tree/main/src/assets)
+- [Assets](assets/)
+- [Marking Scheme](marking/marking-scheme.json)
 
 ## About the Project
 
