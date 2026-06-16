@@ -31,7 +31,7 @@ HTML, CSS, JavaScript (framework permitted).
 - GIFTS logo (`assets/images/gifts-logo.png`)
 - design files (`assets/design/`).
 
-## Data model
+### Data model
 
 Initial `training.json` has **exactly 120** entries in `days`.
 
@@ -86,7 +86,7 @@ Persist every change to the training schedule — adding, editing, moving, or de
 
 ### Application layout
 
-Implement single-page layout with four regions: **header**, **sidebar**, **work area**, and **footer**. Main features might be usable at least on desktop resolution.
+Implement single-page layout with four regions: **header**, **sidebar**, **work area**, and **footer**. Main features must be usable at least on desktop resolution.
 
 Design reference images in `assets/design/` may be used as a guide, but **pixel-perfect reproduction is not required**. You may apply your own visual design as long as it meets the functional and layout requirements in this document.
 
@@ -172,7 +172,7 @@ On startup, the calendar shows the **current month**. Navigate months within the
 
 #### Day cell content
 
-On days **with events** each cell shows:
+On days **with events**, each cell shows:
 
 | Element           | Display                                                                                                                                                                          |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -181,7 +181,7 @@ On days **with events** each cell shows:
 | **Total hours**   | Sum of `durationHours` (e.g. `6h`)                                                                                                                                               |
 | **Type badges**   | `T` task, `E` evaluation, `O` other — only types present; color-coded per the GIFTS color palette (blue / green / purple)                                                        |
 
-Examples: task + evaluation same name → `#42`, `ES2023 S17 - Module D`, `6h`, `[T]` `[E]`; mixed names → `Multiple different events` with hours and badges.
+Examples: task + evaluation same name → `#42`, `ES2023 S17 - Module D`, `6h`, `T` `E`; mixed names → `Multiple different events` with hours and badges.
 
 On **empty days** (no events): no summary, only the day number.
 
@@ -206,10 +206,10 @@ Opens on cell click.
 Enforce all rules below on every relevant operation. Show user-friendly validation messages (e.g. "This day has reached the 9-hour limit", "Duration must be a whole hour between 1 and 9", "122 days already have events — cannot schedule to a new day") when a change is invalid.
 
 1. At most **122 days** may have events.
-2. Only days within the defined **training period** may have event.
-3. Event types may only `project task`, `evaluation`or `other`.
-4. Each day have at most **3 events**
-5. Each event must have **1–9 whole hours** duration (0 and fractional hours are rejected);
+2. Only days within the defined **training period** may have events.
+3. Event types must be `task`, `evaluation`, or `other`.
+4. Each day has at most **3 events**.
+5. Each event must have **1–9 whole hours** duration (0 and fractional hours are rejected).
 6. The **daily total** of all events on that day must not exceed **9 hours**.
 7. Tasks and evaluations must be chosen **only** from `collection.json`.
 8. Each MITS project task from `collection.json` may be scheduled **at most twice** as a `task` event and **at most twice** as an `evaluation` event. (Each MITS project task from `collection.json` has a **unique** `name` property.)
@@ -245,8 +245,8 @@ Each card shows:
 
 The statistics view must display the following info:
 
-- number of completed training days (days where all assigned `task` and `evaulation` events are marked done);
-- total planned hours vs. completed hours (only `task` and `evaulation` events must count);
+- number of completed training days (days where all assigned `task` and `evaluation` events are marked done);
+- total planned hours vs. completed hours (only `task` and `evaluation` events must count);
 - MITS scheduling status: list only `collection.json` entries with fewer than 2 `task` assignments or fewer than 2 `evaluation` assignments, showing the current count for each;
 - Day-coverage warnings (if applicable):
 
@@ -263,7 +263,7 @@ Header buttons let users back up and restore the training schedule.
 
 - Triggered from the **Export** button in the header.
 - Downloads the **current persisted schedule** as a JSON file (browser file save).
-- JSON uses the same structure as the provided`training.json`.
+- JSON uses the same structure as the provided `training.json`.
 - Exported `days` contain **only days with events**.
 - Output is **human-readable** (formatted / pretty-printed).
 

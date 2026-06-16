@@ -73,7 +73,7 @@
           "description": "Import rejects invalid JSON or rule-breaking data with an error message",
           "maxMark": 0.25,
           "wsosSection": 2,
-          "extraDescription": "Test: Import malformed JSON or data violating business rules. A clear error is shown and stored data is unchanged.",
+          "extraDescription": "Test: Import malformed JSON or data violating validation rules. A clear error is shown and stored data is unchanged.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -97,7 +97,7 @@
             "Errors are missing, cryptic, or do not explain why the action failed",
             "Errors appear for some invalid actions but messages are generic or hard to understand",
             "Most invalid actions show clear, human-readable messages describing the rule violated",
-            "All tested invalid actions show specific, actionable messages matching project examples (9-hour limit, whole hours 1–9, 122-day cap, third scheduling of the same event type)"
+            "All tested invalid actions show specific, actionable messages matching project examples (9-hour limit, whole hours 1–9, 122-day cap, scheduling limits)"
           ]
         }
       ]
@@ -184,7 +184,7 @@
             "Icons from assets/svgs/ are not used or are broken",
             "Some provided SVG icons are used but usage is incomplete or inconsistent",
             "Navigation, header actions, and view controls use appropriate icons from assets/svgs/",
-            "Icons are used consistently with good sizing, alignment, and visual harmony in both themes"
+            "Icons are used consistently with good sizing, alignment, and visual harmony in both light and dark modes"
           ]
         },
         {
@@ -243,17 +243,17 @@
           "description": "Export downloads human-readable JSON of the current schedule",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Click Export. A formatted JSON file downloads with version, trainingPeriod, and days/events matching on-screen data.",
+          "extraDescription": "Test: Click Export. A formatted JSON file downloads with version, trainingPeriod, and days/events matching on-screen data. The days array contains only days with events.",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Exported JSON contains no runtime-only event IDs",
+          "description": "Exported JSON matches the data model with no extra event fields",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Export after using the app. Event objects contain only type, name, durationHours, kanbanStatus, and description (for other) — no UI-generated id fields.",
+          "extraDescription": "Test: Export after using the app. Event objects contain only type, name, durationHours, kanbanStatus, and description (for other) — no UI-generated id fields or collection-only fields such as displayName or estTime.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -263,7 +263,7 @@
           "description": "Import replaces persisted state and refreshes calendar, Kanban, and statistics",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: After confirming import of a valid export file, all three views reflect imported data and reload still shows imported state.",
+          "extraDescription": "Test: After confirming import of a valid export file, all three views reflect imported data, validation rules are enforced, and reload still shows imported state.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -281,11 +281,11 @@
       ]
     },
     {
-      "name": "Business Rules and Data Integrity",
+      "name": "Validation Rules and Data Integrity",
       "aspects": [
         {
           "type": "measurement",
-          "description": "Each day allows 1–3 events only",
+          "description": "Each day allows at most 3 events",
           "maxMark": 0.5,
           "wsosSection": 4,
           "extraDescription": "Test: On a day with 3 events, adding a 4th is blocked with an error.",
@@ -308,7 +308,7 @@
           "description": "A collection entry may be scheduled at most twice as task",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Schedule the same collection.json entry as task on two separate days — allowed. A third task scheduling of that entry is blocked.",
+          "extraDescription": "Test: Schedule the same collection.json entry as task on two separate days — allowed. Scheduling it as task on a third day is blocked.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -318,7 +318,7 @@
           "description": "A collection entry may be scheduled at most twice as evaluation",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Schedule the same collection.json entry as evaluation on two separate days — allowed. A third evaluation scheduling of that entry is blocked.",
+          "extraDescription": "Test: Schedule the same collection.json entry as evaluation on two separate days — allowed. Scheduling it as evaluation on a third day is blocked.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -338,7 +338,7 @@
           "description": "Task and evaluation events are selected only from collection.json",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Task/evaluation pickers only accept names present in collection.json.",
+          "extraDescription": "Test: Task/evaluation pickers only list names present in collection.json.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -373,7 +373,7 @@
           "description": "Day cells with events show sequence number, name summary, total hours, and type badges",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: On a populated day, cell shows #n, name (or Multiple different events), total hours (e.g. 6h), and applicable [T]/[E]/[O] badges using the GIFTS color palette. Empty days show only the day number.",
+          "extraDescription": "Test: On a populated day, cell shows #n, name (or Multiple different events), total hours (e.g. 6h), and applicable T / E / O badges using the GIFTS color palette. Empty days show only the day number.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -423,7 +423,7 @@
           "description": "Events can be rescheduled in the modal with date field and Move button",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Change an event date via inline edit or date picker and click Move. Event moves to the target day within the training period.",
+          "extraDescription": "Test: Change an event date via inline edit or date picker and click Move. Event moves to the target day; validation rules apply (training period, day limits, 122-day cap).",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -523,7 +523,7 @@
           "description": "Statistics show completed training days and planned vs completed hours",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Statistics view displays the number of completed training days (days where relevant task/evaluation work is marked done on the Kanban board) and total planned hours vs completed hours from persisted state.",
+          "extraDescription": "Test: Statistics view displays completed training days (days where all assigned task and evaluation events are marked done) and total planned vs completed hours counting only task and evaluation events.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -543,7 +543,7 @@
           "description": "Day-coverage warnings when fewer than 120 or more than 122 days have events",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: With fewer than 120 days with events, warning about n/120 is visible. If days exceed 122, maximum-exceeded warning is shown while the condition holds.",
+          "extraDescription": "Test: With fewer than 120 days with events, warning about n/120 is visible. If more than 122 days have events, maximum-exceeded warning is shown while the condition holds.",
           "calculation": {
             "type": "pass-or-fail"
           }
