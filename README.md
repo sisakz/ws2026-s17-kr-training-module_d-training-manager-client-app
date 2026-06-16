@@ -1,6 +1,6 @@
 # GIFTS Training Manager
 
-A client-side prototype for managing GIFTS (Global Institute for Transferring Skills) web developer training schedules, events, and progress over a 120-day preparation period.
+A client-side prototype for managing GIFTS (Global Institute for Transferring Skills) web technologies training schedules, events, and progress over a 120-day preparation period.
 
 ## Skill domain(s)
 

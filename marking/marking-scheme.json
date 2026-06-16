@@ -1,5 +1,5 @@
 {
-  "totalMark": 18,
+  "totalMark": 21,
   "wsosSections": {
     "1": "Work organization and self-management",
     "2": "Communication and interpersonal skills",
@@ -16,17 +16,17 @@
           "description": "Initial data loads from assets when no saved browser state exists",
           "maxMark": 0.5,
           "wsosSection": 1,
-          "extraDescription": "Test: Clear site data/localStorage for the app origin, reload the page. The calendar shows 120 training days loaded from assets/data/training.json and task/evaluation pickers use entries from assets/data/collection.json.",
+          "extraDescription": "Test: Clear site data/localStorage for the app origin, reload the page. The schedule shows 120 training days from assets/data/training.json and MITS pickers use assets/data/collection.json.",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Single-page layout with header, sidebar, and work area",
+          "description": "Single-page layout with header, sidebar, work area, and footer",
           "maxMark": 0.25,
           "wsosSection": 1,
-          "extraDescription": "Test: On load, verify a header bar (title and controls), a vertical sidebar navigation, and a main work area beside the sidebar — all visible without navigating to another URL.",
+          "extraDescription": "Test: On load, verify all four regions are visible without navigating to another URL.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -36,7 +36,7 @@
           "description": "Sidebar navigation switches views with active item highlighted",
           "maxMark": 0.25,
           "wsosSection": 1,
-          "extraDescription": "Test: Click Month (Calendar), Kanban, and Statistics in the sidebar. Each click shows the corresponding view in the work area and the selected menu item is visually distinguished from inactive items.",
+          "extraDescription": "Test: Click Month (Calendar), Kanban, and Statistics. Each shows the correct view and the selected menu item is visually distinguished.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -44,7 +44,7 @@
         {
           "type": "judgement",
           "description": "Code organization and maintainability",
-          "maxMark": 1.0,
+          "maxMark": 1.5,
           "wsosSection": 1,
           "judgementScoreDescription": [
             "Code is unstructured, duplicated, or difficult to follow; files and responsibilities are unclear",
@@ -60,10 +60,20 @@
       "aspects": [
         {
           "type": "measurement",
-          "description": "Import JSON requires user confirmation before overwriting stored state",
+          "description": "Import shows a confirmation dialog before overwriting stored state",
           "maxMark": 0.25,
           "wsosSection": 2,
-          "extraDescription": "Test: Make a visible change, export or note current state, then import a JSON file. A confirmation dialog (or equivalent) appears before the stored state is replaced; canceling leaves data unchanged.",
+          "extraDescription": "Test: Import a valid exported file. A confirmation dialog appears before overwrite; canceling leaves current data unchanged.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Import rejects invalid JSON or rule-breaking data with an error message",
+          "maxMark": 0.25,
+          "wsosSection": 2,
+          "extraDescription": "Test: Import malformed JSON or data violating business rules. A clear error is shown and stored data is unchanged.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -73,7 +83,7 @@
           "description": "Invalid changes in the day modal are rejected with a visible error message",
           "maxMark": 0.5,
           "wsosSection": 2,
-          "extraDescription": "Test: In the day details modal, attempt at least one invalid action (e.g. add a 4th event to a day, set duration to 0 or 10 hours, or exceed 9 daily hours). The change is blocked and an error message is shown in or near the modal without corrupting data.",
+          "extraDescription": "Test: In the day details modal, attempt an invalid action (e.g. 4th event on a day, 0 or fractional hours, or exceeding 9 daily hours). The change is blocked and an error appears without corrupting data.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -86,8 +96,8 @@
           "judgementScoreDescription": [
             "Errors are missing, cryptic, or do not explain why the action failed",
             "Errors appear for some invalid actions but messages are generic or hard to understand",
-            "Most invalid actions show clear, human-readable messages that describe the rule violated (e.g. hour limits, day limits)",
-            "All tested invalid actions show specific, actionable messages matching project examples (9-hour limit, whole hours 1–9, 122-day cap, duplicate MITS task scheduling)"
+            "Most invalid actions show clear, human-readable messages describing the rule violated",
+            "All tested invalid actions show specific, actionable messages matching project examples (9-hour limit, whole hours 1–9, 122-day cap, third scheduling of the same event type)"
           ]
         }
       ]
@@ -97,10 +107,30 @@
       "aspects": [
         {
           "type": "measurement",
-          "description": "Header includes title, theme toggle, fullscreen, export, and import controls",
+          "description": "Header shows GIFTS logo, title, theme toggle, fullscreen, export, and import",
           "maxMark": 0.25,
           "wsosSection": 3,
-          "extraDescription": "Test: Verify the header shows an application title (e.g. GIFTS Training Manager) and working controls for theme, fullscreen, export, and import.",
+          "extraDescription": "Test: Verify assets/images/gifts-logo.png is shown with the Training Manager title and header controls for theme, fullscreen, export, and import.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Footer shows HRDKorea copyright and Powered by MITS link to skillsit.eu",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Footer displays an HRDKorea copyright notice and a working Powered by MITS link to https://skillsit.eu.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Light/dark theme can be toggled from the header",
+          "maxMark": 0.5,
+          "wsosSection": 3,
+          "extraDescription": "Test: Click the theme toggle. The interface switches visibly between light and dark mode.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -108,9 +138,29 @@
         {
           "type": "measurement",
           "description": "Light/dark theme choice persists after page reload",
-          "maxMark": 0.5,
+          "maxMark": 0.25,
           "wsosSection": 3,
-          "extraDescription": "Test: Switch to dark mode (or light if already dark), reload the page. The same theme is applied without toggling again.",
+          "extraDescription": "Test: Switch theme, reload the page. The same theme is applied without toggling again.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "GIFTS theme colors are applied to UI accents and type indicators",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Task indicators use theme blue, evaluation indicators use theme green, and other indicators use theme purple — recognizable in both light and dark themes.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Calendar day status styling distinguishes past, today, and future days",
+          "maxMark": 0.25,
+          "wsosSection": 3,
+          "extraDescription": "Test: Past days appear dimmer, today has a highlighted border, future days use normal appearance — without a text label reading Today.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -120,27 +170,7 @@
           "description": "Fullscreen mode can be toggled from the header",
           "maxMark": 0.25,
           "wsosSection": 3,
-          "extraDescription": "Test: Click the fullscreen control — the app enters browser fullscreen (or equivalent full-viewport mode). Click again to exit.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Calendar day status styling distinguishes past, today, and future days",
-          "maxMark": 0.5,
-          "wsosSection": 3,
-          "extraDescription": "Test: In the monthly calendar, past days appear dimmer/greyer, today has a highlighted border or stronger background, and future days use normal or slightly dim styling — without a text label reading \"Today\".",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Event type badges on calendar cells are color-coded",
-          "maxMark": 0.25,
-          "wsosSection": 3,
-          "extraDescription": "Test: On a day with task, evaluation, and/or other events, badges [T], [E], and/or [O] appear for present types and use distinct colors (e.g. T blue, E green, O purple) that remain readable in both themes.",
+          "extraDescription": "Test: Fullscreen control enters and exits browser fullscreen (or equivalent full-viewport mode).",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -148,13 +178,13 @@
         {
           "type": "judgement",
           "description": "Provided SVG icons are used appropriately in the UI",
-          "maxMark": 0.5,
+          "maxMark": 0.75,
           "wsosSection": 3,
           "judgementScoreDescription": [
-            "Icons from assets/svgs/ are not used or are broken/missing",
-            "Some provided SVG icons are used for navigation or header actions but usage is incomplete or inconsistent",
-            "Calendar, kanban, statistics, export, import, theme, and navigation actions use appropriate icons from assets/svgs/",
-            "Icons are used consistently throughout with appropriate sizing, alignment, and visual harmony in both light and dark themes"
+            "Icons from assets/svgs/ are not used or are broken",
+            "Some provided SVG icons are used but usage is incomplete or inconsistent",
+            "Navigation, header actions, and view controls use appropriate icons from assets/svgs/",
+            "Icons are used consistently with good sizing, alignment, and visual harmony in both themes"
           ]
         },
         {
@@ -163,34 +193,34 @@
           "maxMark": 1.0,
           "wsosSection": 3,
           "judgementScoreDescription": [
-            "Layout is unstyled or cluttered; poor readability and inconsistent spacing/colors",
-            "Functional styling with readable content but limited visual cohesion or polish",
-            "Visually cohesive design with consistent typography, spacing, and color use across calendar, kanban, and statistics views",
-            "Polished, professional interface with excellent visual hierarchy, consistent theming, and thoughtful UX details across all views"
+            "Layout is unstyled or cluttered with poor readability",
+            "Functional styling with readable content; layout may differ from design reference images if requirements are met",
+            "Visually cohesive design with consistent typography, spacing, and GIFTS brand colors; own design choices are acceptable without pixel-perfect match to references",
+            "Polished, professional interface with excellent visual hierarchy; creative layout that fully meets functional requirements"
           ]
         },
         {
           "type": "judgement",
           "description": "Calendar, Kanban, and Statistics views are well structured and clear",
-          "maxMark": 1.0,
+          "maxMark": 0.75,
           "wsosSection": 3,
           "judgementScoreDescription": [
-            "One or more views are missing, empty, or confusing to use",
-            "All three views are present and usable but layout or labeling leaves ambiguity",
-            "Each view is clearly laid out with understandable labels, navigation, and content hierarchy",
-            "All views are exceptionally clear with intuitive navigation, consistent patterns, and no unnecessary friction for assessors"
+            "One or more views are missing, empty, or confusing",
+            "All views are present and usable but layout or labeling leaves ambiguity",
+            "Each view is clearly laid out with understandable labels and navigation",
+            "All views are exceptionally clear with intuitive navigation and consistent patterns"
           ]
         },
         {
           "type": "judgement",
           "description": "Responsive layout usable on desktop resolution",
-          "maxMark": 0.75,
+          "maxMark": 0.5,
           "wsosSection": 3,
           "judgementScoreDescription": [
-            "Main features are broken, overlapping, or unusable at typical desktop width (~1280px)",
-            "Core features work at desktop width but with noticeable layout issues or truncated controls",
-            "Header, sidebar, calendar grid, kanban columns, and statistics remain usable at desktop width without horizontal scrolling for main content",
-            "Layout adapts well at desktop width with no overlapping elements, readable text, and comfortable use of calendar, kanban, and statistics"
+            "Main features are broken or unusable at typical desktop width (~1280px)",
+            "Core features work but with noticeable layout issues",
+            "Header, sidebar, calendar, kanban, and statistics remain usable at desktop width",
+            "Layout adapts well at desktop width with no overlapping elements or truncated controls"
           ]
         }
       ]
@@ -200,40 +230,20 @@
       "aspects": [
         {
           "type": "measurement",
-          "description": "Schedule changes persist after page refresh and browser restart",
+          "description": "Schedule changes persist after page refresh",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Add or edit an event, change a kanban status, reload the page (and if possible close/reopen the tab). All changes remain.",
+          "extraDescription": "Test: Add or edit an event, change kanban status, reload the page. All changes remain.",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Export downloads the current state as human-readable formatted JSON",
+          "description": "Export downloads human-readable JSON of the current schedule",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Click Export. A JSON file downloads containing version, trainingPeriod, and days with events matching the on-screen schedule. JSON is formatted for human reading (indented or pretty-printed).",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Import loads JSON state and refreshes all views",
-          "maxMark": 0.5,
-          "wsosSection": 4,
-          "extraDescription": "Test: After confirming import, calendar, kanban, and statistics reflect the imported data; subsequent reload still shows imported state.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Deleting the last event on a day removes that day from persisted state",
-          "maxMark": 0.25,
-          "wsosSection": 4,
-          "extraDescription": "Test: Open a day with one event, delete it, reload. That date no longer appears in days[] (export or devtools/localStorage inspection confirms removal).",
+          "extraDescription": "Test: Click Export. A formatted JSON file downloads with version, trainingPeriod, and days/events matching on-screen data.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -243,7 +253,27 @@
           "description": "Exported JSON contains no runtime-only event IDs",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Export after using the app. Event objects in the JSON use type, name, durationHours, kanbanStatus, and description (for other) only — no UI-generated id fields.",
+          "extraDescription": "Test: Export after using the app. Event objects contain only type, name, durationHours, kanbanStatus, and description (for other) — no UI-generated id fields.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Import replaces persisted state and refreshes calendar, Kanban, and statistics",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "extraDescription": "Test: After confirming import of a valid export file, all three views reflect imported data and reload still shows imported state.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Deleting the last event on a day removes that day from persisted state",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Delete the only event on a day, reload. That date no longer appears in days[] (verify via export or persisted storage).",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -257,8 +287,8 @@
           "type": "measurement",
           "description": "Each day allows 1–3 events only",
           "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "Test: On a day with 3 events, adding a 4th is blocked with an error. Days with 1–3 events accept valid additions.",
+          "wsosSection": 4,
+          "extraDescription": "Test: On a day with 3 events, adding a 4th is blocked with an error.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -267,28 +297,38 @@
           "type": "measurement",
           "description": "Event duration is whole hours between 1 and 9; daily total does not exceed 9 hours",
           "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "Test: Reject 0, fractional (e.g. 1.5), or 10+ hour durations. On a day already at 9 total hours, adding another event is blocked.",
+          "wsosSection": 4,
+          "extraDescription": "Test: Reject 0, fractional, or 10+ hour durations. Block additions that would exceed 9 hours on one day.",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "A MITS task name may appear on at most two days (task + evaluation pair)",
-          "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "Test: Schedule the same collection.json task name as task on day A and evaluation on day B — allowed. Attempt to schedule the same name on a third day — blocked.",
+          "description": "A collection entry may be scheduled at most twice as task",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Schedule the same collection.json entry as task on two separate days — allowed. A third task scheduling of that entry is blocked.",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "At most 122 days in days[]; no new empty day when already at 122",
+          "description": "A collection entry may be scheduled at most twice as evaluation",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Schedule the same collection.json entry as evaluation on two separate days — allowed. A third evaluation scheduling of that entry is blocked.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "At most 122 days in days[]; no new day when already at 122",
           "maxMark": 0.5,
-          "wsosSection": 5,
-          "extraDescription": "Test: With days.length === 122, rescheduling or adding an event to a date not already in days[] is forbidden. Events may still be added or moved among existing 122 dates.",
+          "wsosSection": 4,
+          "extraDescription": "Test: With days.length === 122, rescheduling or adding to a date not in days[] is forbidden. Events may still be moved among existing 122 dates.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -297,8 +337,8 @@
           "type": "measurement",
           "description": "Task and evaluation events are selected only from collection.json",
           "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "Test: When adding task/evaluation events, only names present in collection.json can be chosen; arbitrary MITS names not in the catalog are not accepted.",
+          "wsosSection": 4,
+          "extraDescription": "Test: Task/evaluation pickers only accept names present in collection.json.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -307,8 +347,8 @@
           "type": "measurement",
           "description": "Other events require name, description, and whole-hour duration",
           "maxMark": 0.25,
-          "wsosSection": 5,
-          "extraDescription": "Test: Adding an other-type event without description or with invalid duration is rejected; valid other events save with free-text name and required description.",
+          "wsosSection": 4,
+          "extraDescription": "Test: Other events without description or with invalid duration are rejected.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -320,10 +360,30 @@
       "aspects": [
         {
           "type": "measurement",
-          "description": "Monthly calendar navigates previous and next month within the training period",
+          "description": "Monthly calendar grid is shown with previous and next month navigation",
+          "maxMark": 0.75,
+          "wsosSection": 4,
+          "extraDescription": "Test: Open the calendar view. A monthly grid is visible. Use previous/next controls to navigate between months within the training period (2026-02 through 2026-08).",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Day cells with events show sequence number, name summary, total hours, and type badges",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Use month navigation controls to move between months from 2026-02 through 2026-08. The grid updates to the selected month.",
+          "extraDescription": "Test: On a populated day, cell shows #n, name (or Multiple different events), total hours (e.g. 6h), and applicable [T]/[E]/[O] badges using theme colors. Empty days show only the day number.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Calendar shows the current month on startup",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Clear site data, reload the app, open the calendar. The grid displays the current calendar month.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -333,47 +393,47 @@
           "description": "Days outside the training period appear dimmed on the calendar grid",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: In months overlapping the period boundaries, dates before 2026-02-01 or after 2026-08-31 are visually dimmed compared to in-period days.",
+          "extraDescription": "Test: In months overlapping period boundaries, dates before 2026-02-01 or after 2026-08-31 are visually dimmed.",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Day cells with events show sequence number, summary, hours, and type badges",
-          "maxMark": 0.25,
-          "wsosSection": 4,
-          "extraDescription": "Test: On a populated day, the cell shows #n (1-based index by ascending date in days), event name (or rules below), total hours (e.g. 6h), and applicable [T]/[E]/[O] badges. Empty days show no sequence or event summary.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Mixed event names display as \"Multiple different events\"",
-          "maxMark": 0.25,
-          "wsosSection": 4,
-          "extraDescription": "Test: On a day where events have different names, the cell shows the text \"Multiple different events\" (not a single task name) with hours and badges still shown.",
-          "calculation": {
-            "type": "pass-or-fail"
-          }
-        },
-        {
-          "type": "measurement",
-          "description": "Day details modal shows full event list with collection fields for MITS events",
+          "description": "Day details modal displays full event list with collection displayName for MITS events",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Click a day with events. Modal shows date, sequence #n, and each event's type, name, durationHours, kanbanStatus (where relevant), description for other events, and extra collection.json fields (e.g. displayName) for task/evaluation.",
+          "extraDescription": "Test: Click a day with events. Modal shows date, sequence #n, and each event's fields including displayName and kanbanStatus for task/evaluation, and description for other.",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Events can be added, deleted, and rescheduled only in the modal",
+          "description": "Events can be added and deleted in the day details modal",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: In the modal, add a valid event, delete an event, and reschedule an event to another in-period date (creating a new day entry when days.length < 122). Calendar has no inline editing; changes appear after modal close.",
+          "extraDescription": "Test: In the modal, add a valid event and delete an event via the trash icon. Changes appear after modal close. No inline calendar editing.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Events can be rescheduled in the modal with date field and Move button",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Change an event date via inline edit or date picker and click Move. Event moves to the target day within the training period.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "MITS task picker filters by event type and applies default durations",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "extraDescription": "Test: When adding task, picker lists only collection entries with fewer than 2 task assignments and shows each name; default duration is estTime. For evaluation, fewer than 2 evaluation assignments; default 2 hours (editable).",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -383,7 +443,17 @@
           "description": "Modal closes via Esc, outside click, or Close button and refreshes the calendar",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: After editing, close the modal using Esc, clicking outside, and the Close button (separate attempts). Calendar cell summaries update to reflect changes.",
+          "extraDescription": "Test: After edits, close the modal each way. Calendar cell summaries update on close.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Modal Save and Cancel buttons apply or discard edits",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: Make edits in the modal, click Cancel — changes are discarded. Make edits again, click Save — changes are kept after modal close and page reload.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -395,10 +465,20 @@
       "aspects": [
         {
           "type": "measurement",
-          "description": "Weekly Kanban shows Mon–Sun with previous/next week navigation",
+          "description": "Weekly Kanban board shows Mon–Sun with previous and next week navigation",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Kanban view displays one week (Monday–Sunday). Previous/next week buttons change the displayed week. On first load, the current week or the week containing today is selected.",
+          "extraDescription": "Test: Kanban view shows one Monday–Sunday week and previous/next week buttons change the displayed week.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Kanban selects the current week or week containing today on startup",
+          "maxMark": 0.25,
+          "wsosSection": 4,
+          "extraDescription": "Test: On first load, the board shows the current week or the week that contains today's date.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -408,27 +488,27 @@
           "description": "Only task and evaluation events appear on the Kanban board",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Schedule an other-type event on a day in the current week. It does not appear on the kanban; task and evaluation events for that week do appear.",
+          "extraDescription": "Test: Schedule an other-type event in the current week. It does not appear on the board; task and evaluation events do.",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Drag and drop between ToDo, InProgress, and Done updates kanbanStatus and persists",
+          "description": "Drag-and-drop between columns updates kanbanStatus and persists",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Drag a card from ToDo to InProgress or Done. Column matches kanbanStatus (todo/inProgress/done). Reload the page — status is unchanged.",
+          "extraDescription": "Test: Drag a card between ToDo, InProgress, and Done. Status persists after page reload.",
           "calculation": {
             "type": "pass-or-fail"
           }
         },
         {
           "type": "measurement",
-          "description": "Kanban cards show event type, name, duration, and associated day date",
-          "maxMark": 0.25,
+          "description": "Kanban cards show type chip, displayName, name, date, and duration",
+          "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Each visible card displays at minimum the event type, name, durationHours, and the date of its training day.",
+          "extraDescription": "Test: Each card has TASK (theme blue) or EVALUATION (theme green) chip, bold displayName, collection name, and details line e.g. 2026-06-17 · 3h.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -440,10 +520,20 @@
       "aspects": [
         {
           "type": "measurement",
-          "description": "Statistics show completed training days, planned vs completed hours, and MITS task occurrence counts",
+          "description": "Statistics show completed training days and planned vs completed hours",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Statistics view displays (1) number of completed training days, (2) total planned hours vs completed hours, and (3) per-task occurrence showing 1× or 2× usage as task/evaluation pairs on separate days. Values update after import/export.",
+          "extraDescription": "Test: Statistics view displays the number of completed training days (days where relevant task/evaluation work is marked done on the Kanban board) and total planned hours vs completed hours from persisted state.",
+          "calculation": {
+            "type": "pass-or-fail"
+          }
+        },
+        {
+          "type": "measurement",
+          "description": "Statistics list only collection entries with incomplete task or evaluation scheduling",
+          "maxMark": 0.5,
+          "wsosSection": 4,
+          "extraDescription": "Test: List shows only collection.json entries with fewer than 2 task assignments or fewer than 2 evaluation assignments, with current counts. Fully scheduled entries are omitted.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -451,9 +541,9 @@
         {
           "type": "measurement",
           "description": "Day-coverage warnings appear when days.length is below 120 or above 122",
-          "maxMark": 0.5,
+          "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: With fewer than 120 days with events, a non-blocking warning such as \"Warning: only {n}/120 training days have active events.\" is visible. If days.length exceeds 122, a warning about exceeding the maximum is shown while the condition holds.",
+          "extraDescription": "Test: With fewer than 120 days with events, warning about n/120 is visible. If days exceed 122, maximum-exceeded warning is shown while the condition holds.",
           "calculation": {
             "type": "pass-or-fail"
           }

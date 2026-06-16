@@ -6,9 +6,16 @@
 
 ## Introduction
 
-Build a **standalone frontend prototype** for **GIFTS** (Global Institute for Transferring Skills), an affiliated organization of the Human Resources Development Service of Korea (HRDKorea) that manages WorldSkills Korea, to coordinate preparation for web technologies training. Training activities focus on project tasks from **MITS** (Marketable IT Skills, https://skillit.eu), a large collection of standardized test projects adapted from national and international skills competitions. The full product will include a REST API backend; this module is **client-side only**: load JSON on startup, persist changes in the browser, and support JSON export/import.
+Build a **standalone frontend prototype** for **GIFTS** (Global Institute for Transferring Skills), an affiliated organization of the Human Resources Development Service of Korea (HRDKorea) that manages WorldSkills Korea, to coordinate preparation for web technologies training. Training activities focus on project tasks from **MITS** (Marketable IT Skills, https://skillsit.eu), a large collection of standardized test projects adapted from national and international skills competitions. The full product will include a REST API backend; this module is **client-side only**: load JSON on startup, persist changes in the browser, and support JSON export/import.
 
-On one interface the user tracks **120 training days**, schedules events, monitors progress, and views statistics.
+The **GIFTS Training Manager** helps training coordinators and competitors plan and monitor a **120-day** WorldSkills web technologies training programme. Using the application, they can:
+
+- view and edit the training schedule on a **monthly calendar** — add, move, or remove events per day through a day-details modal;
+- track **project tasks** and **evaluations** from the MITS catalog, plus custom **other** events (meetings, mental training, and similar);
+- follow task progress on a **weekly Kanban board** (ToDo, InProgress, Done);
+- review **statistics** — completed days, planned vs completed hours, scheduling gaps, and day-coverage warnings.
+
+The application loads an initial schedule and the MITS task catalog from JSON files, **persists all changes in the browser**, and supports **export and import** of the schedule so plans can be backed up or shared. Built-in **business rules** enforce daily event limits, hour limits, and how often each MITS task may be scheduled.
 
 **Technology:** HTML, CSS, JavaScript (framework permitted).
 
@@ -16,7 +23,7 @@ On one interface the user tracks **120 training days**, schedules events, monito
 
 **Out of scope:** backend, API, database, authentication, multi-user, server-side validation.
 
-**Data files and assets:** `assets/data/training.json` (initial schedule), `assets/data/collection.json` (MITS task catalog), SVG icons in `assets/svgs/` and GIFTS logo (`assets/images/gifts-logo.png`).
+**Data files and assets:** `assets/data/training.json` (initial schedule), `assets/data/collection.json` (MITS task catalog), SVG icons in `assets/svgs/`, GIFTS logo (`assets/images/gifts-logo.png`) and design files (`assets/design/`).
 
 **Terms:** _Training period_ — preparation date range (e.g. 2026-02-01 – 2026-08-31). _Training day_ — a date in the `days` array (starts at 120 entries, max 122). _Project task_ / _evaluation_ — from `collection.json`. _Other event_ — custom event with `name`, `description`, `durationHours`.
 
@@ -25,6 +32,8 @@ On one interface the user tracks **120 training days**, schedules events, monito
 ### Application layout
 
 Single-page layout with four regions: **header**, **sidebar**, **work area**, and **footer**.
+
+Design reference images in `assets/design/` may be used as a guide, but **pixel-perfect reproduction is not required**. You may apply your own visual design as long as it meets the functional and layout requirements in this document.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -39,12 +48,12 @@ Single-page layout with four regions: **header**, **sidebar**, **work area**, an
 
 #### Header
 
-| Element                  | Description                                   |
-| ------------------------ | --------------------------------------------- |
-| Application logo & title | GIFTS logo with Training Manager title        |
-| Theme toggle             | Light / dark mode (persists after reload)     |
-| Fullscreen               | Toggle fullscreen on / off                    |
-| Export                   | Download the current training schedule as a JSON file (see [Export and import](#export-and-import)) |
+| Element                  | Description                                                                                                        |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| Application logo & title | GIFTS logo with Training Manager title                                                                             |
+| Theme toggle             | Light / dark mode (persists after reload)                                                                          |
+| Fullscreen               | Toggle fullscreen on / off                                                                                         |
+| Export                   | Download the current training schedule as a JSON file (see [Export and import](#export-and-import))                |
 | Import                   | Load a previously exported JSON file and replace the stored schedule (see [Export and import](#export-and-import)) |
 
 #### Sidebar
@@ -78,11 +87,11 @@ Use provided SVG icons from `assets/svgs/` where appropriate (calendar, kanban, 
 
 Use the GIFTS logo palette as the application theme colors:
 
-| Color  | Hex       | Suggested use                            |
-| ------ | --------- | ---------------------------------------- |
-| Blue   | `#4462b1` | Primary UI accents, `task` badges/chips  |
-| Green  | `#59a149` | `evaluation` badges/chips                |
-| Purple | `#6f2a90` | `other` badges/chips, secondary accents  |
+| Color  | Hex       | Suggested use                           |
+| ------ | --------- | --------------------------------------- |
+| Blue   | `#4462b1` | Primary UI accents, `task` badges/chips |
+| Green  | `#59a149` | `evaluation` badges/chips               |
+| Purple | `#6f2a90` | `other` badges/chips, secondary accents |
 
 Apply consistently across the interface (header, sidebar, buttons, type indicators). Both light and dark themes should preserve recognizable brand colors.
 
@@ -117,7 +126,6 @@ Header buttons let users back up and restore the training schedule. `collection.
 - JSON uses the same structure as `training.json`: `version`, `trainingPeriod`, and `days` with events (`type`, `name`, `durationHours`, `kanbanStatus`, and `description` for `other` events).
 - Output is **human-readable** (formatted / pretty-printed).
 - Event objects must **not** include runtime-only fields (e.g. UI-generated `id` values).
-- May optionally include `exportedAt` (ISO timestamp).
 
 #### Import
 
@@ -177,7 +185,7 @@ Initial `training.json` has **exactly 120** entries in `days`.
 | ---------- | ---------------------------------- |
 | **Past**   | Dimmer / greyer background or text |
 | **Today**  | Highlighted border                 |
-| **Future** | Normal apperiance                  |
+| **Future** | Normal appearance                  |
 
 #### Day cell content
 
@@ -188,7 +196,7 @@ On days **with events** (in the `days` array), each cell shows:
 | **Sequence `#n`** | 1-based index in ascending date order in `days`; `#` prefix (e.g. `#42`); top-right corner; recalculated after add / delete / reschedule; **not shown** if the day has no events |
 | **Name**          | If all events share the same `name`, or there is only one event: show `name`, max **1 lines** with `…` overflow. If names differ: **`Multiple different events`**                |
 | **Total hours**   | Sum of `durationHours` (e.g. `6h`)                                                                                                                                               |
-| **Type badges**   | `[T]` task, `[E]` evaluation, `[O]` other — only types present; color-coded per GIFTS theme colors (blue / green / purple)                                                     |
+| **Type badges**   | `[T]` task, `[E]` evaluation, `[O]` other — only types present; color-coded per GIFTS theme colors (blue / green / purple)                                                       |
 
 Examples: task + evaluation same name → `#42`, `ES2023 S17 - Module D`, `6h`, `[T]` `[E]`; mixed names → `Multiple different events` with hours and badges.
 
@@ -232,12 +240,12 @@ Drag & drop between columns updates status and persists (including after page re
 
 Each card shows:
 
-| Element       | Display                                                                                                                                                              |
-| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Element       | Display                                                                                                                                                  |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Type chip** | Rounded badge at the top left: **`TASK`** — theme blue background, white uppercase text; **`EVALUATION`** — theme green background, white uppercase text |
-| **Title**     | `displayName` from `collection.json` (bold), resolved at runtime via `name`                                                                                          |
-| **Name**      | Collection entry `name`                                                                                                                                              |
-| **Details**   | Associated day date and duration, e.g. `2026-06-17 · 3h`                                                                                                             |
+| **Title**     | `displayName` from `collection.json` (bold), resolved at runtime via `name`                                                                              |
+| **Name**      | Collection entry `name`                                                                                                                                  |
+| **Details**   | Associated day date and duration, e.g. `2026-06-17 · 3h`                                                                                                 |
 
 ### Statistics
 
@@ -269,4 +277,12 @@ Evaluation in **Google Chrome** — business rules, persistence, calendar, Kanba
 
 ## Mark distribution
 
-See `marking/marking-scheme.json`.
+Total: **21 points**. See `marking/marking-scheme.json` for aspect-level detail.
+
+| WSOS SECTION | Description                            | Points |
+| ------------ | -------------------------------------- | ------ |
+| 1            | Work organization and self-management  | 2.5    |
+| 2            | Communication and interpersonal skills | 1.75   |
+| 3            | Design Implementation                  | 5.0    |
+| 4            | Front-End Development                  | 11.75  |
+| **Total**    |                                        | **21** |

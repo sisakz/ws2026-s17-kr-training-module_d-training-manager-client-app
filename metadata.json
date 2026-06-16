@@ -1,7 +1,7 @@
 {
   "name": "SSIF2026 S17 - Module D",
   "displayName": "GIFTS Training Manager",
-  "description": "Build a standalone client-side training manager prototype for GIFTS (Global Institute for Transferring Skills) web developer preparation. The application loads training schedules and MITS task data from JSON files, displays a monthly calendar with day-detail modals, a weekly Kanban board for project tasks and evaluations, and a statistics page. Competitors must enforce business rules (120 training days, event limits, MITS collection references), persist state in the browser, and support JSON export and import. HTML, CSS, and JavaScript are required; a JavaScript framework may be used.",
+  "description": "Build a standalone client-side training manager prototype for GIFTS (Global Institute for Transferring Skills) web technologies training preparation. The application loads training schedules and MITS task data from JSON files, displays a monthly calendar with day-detail modals, a weekly Kanban board for project tasks and evaluations, and a statistics page. Competitors must enforce business rules (120 training days, event limits, MITS collection references), persist state in the browser, and support JSON export and import. HTML, CSS, and JavaScript are required; a JavaScript framework may be used.",
   "url": "https://github.com/sisakz/ws2026-s17-kr-training-module_d-training-manager-client-app",
   "skillDomainIds": [1],
   "languages": ["EN"],
@@ -14,6 +14,6 @@
     }
   ],
   "technologies": ["HTML", "CSS", "JavaScript", "JavaScript Framework"],
-  "tags": ["frontend", "WorldSkills", "training manager", "calendar", "kanban"],
-  "status": "draft"
+  "tags": ["frontend", "GIFTS", "training manager", "calendar", "kanban"],
+  "status": "published"
 }
