@@ -147,10 +147,10 @@
         },
         {
           "type": "measurement",
-          "description": "GIFTS theme colors are applied to UI accents and type indicators",
+          "description": "GIFTS color palette is applied to UI accents and type indicators",
           "maxMark": 0.25,
           "wsosSection": 3,
-          "extraDescription": "Test: Task indicators use theme blue, evaluation indicators use theme green, and other indicators use theme purple — recognizable in both light and dark themes.",
+          "extraDescription": "Test: Task indicators use palette blue, evaluation indicators use palette green, and other indicators use palette purple — recognizable in both light and dark modes.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -273,7 +273,7 @@
           "description": "Deleting the last event on a day removes that day from persisted state",
           "maxMark": 0.25,
           "wsosSection": 4,
-          "extraDescription": "Test: Delete the only event on a day, reload. That date no longer appears in days[] (verify via export or persisted storage).",
+          "extraDescription": "Test: Delete the only event on a day, reload. That date no longer has events in the schedule (verify via export or persisted storage).",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -325,10 +325,10 @@
         },
         {
           "type": "measurement",
-          "description": "At most 122 days in days[]; no new day when already at 122",
+          "description": "At most 122 days may have events; cannot schedule to a new date when already at 122",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: With days.length === 122, rescheduling or adding to a date not in days[] is forbidden. Events may still be moved among existing 122 dates.",
+          "extraDescription": "Test: When 122 days already have events, adding or rescheduling to a date without events is blocked. Events may still be moved among dates that already have events.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -373,7 +373,7 @@
           "description": "Day cells with events show sequence number, name summary, total hours, and type badges",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: On a populated day, cell shows #n, name (or Multiple different events), total hours (e.g. 6h), and applicable [T]/[E]/[O] badges using theme colors. Empty days show only the day number.",
+          "extraDescription": "Test: On a populated day, cell shows #n, name (or Multiple different events), total hours (e.g. 6h), and applicable [T]/[E]/[O] badges using the GIFTS color palette. Empty days show only the day number.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -508,7 +508,7 @@
           "description": "Kanban cards show type chip, displayName, name, date, and duration",
           "maxMark": 0.5,
           "wsosSection": 4,
-          "extraDescription": "Test: Each card has TASK (theme blue) or EVALUATION (theme green) chip, bold displayName, collection name, and details line e.g. 2026-06-17 · 3h.",
+          "extraDescription": "Test: Each card has TASK (GIFTS blue) or EVALUATION (GIFTS green) chip, bold displayName, collection name, and details line e.g. 2026-06-17 · 3h.",
           "calculation": {
             "type": "pass-or-fail"
           }
@@ -540,7 +540,7 @@
         },
         {
           "type": "measurement",
-          "description": "Day-coverage warnings appear when days.length is below 120 or above 122",
+          "description": "Day-coverage warnings when fewer than 120 or more than 122 days have events",
           "maxMark": 0.25,
           "wsosSection": 4,
           "extraDescription": "Test: With fewer than 120 days with events, warning about n/120 is visible. If days exceed 122, maximum-exceeded warning is shown while the condition holds.",
